@@ -10,7 +10,18 @@ public class Enviar {
 
 
     public static void main(String[] args) {
-        enviarMensagem("Teste Claudemyr", "rafael_claudemyr");
+
+        String json = """
+                {
+                    "id": 21,
+                    "modelo": "Camaro Amarelo 3",
+                    "ano": 2000,
+                    "preco": 1.0E7,
+                    "timestamp": "2026-10-29T10:49:13.385360100"
+                }
+                """;
+
+        enviarMensagem(json, "rafael_claudemyr");
     }
 
     public static void enviarMensagem(String message, String queue) {
